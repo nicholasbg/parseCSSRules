@@ -16,10 +16,10 @@ npm install csstype
 
 ## Usage
 
-### `css` tagged template
+### `css` tagged template (default export)
 
 ```ts
-import { css } from "parsecssrules";
+import css from "parsecssrules";
 
 const styles = css`
   color: red;
@@ -62,21 +62,23 @@ const styles = css`
 `;
 ```
 
-### `parseCSSBlock` — raw string parser
+### `parseCSS` — raw string parser
 
 ```ts
-import { parseCSSBlock } from "parsecssrules";
+import { parseCSS } from "parsecssrules";
 
-const styles = parseCSSBlock("color: red; font-size: 16px");
+const styles = parseCSS("color: red; font-size: 16px");
 // { "color": "red", "font-size": "16px" }
 ```
 
 ## Pairing with `addCSSRules`
 
-`parseCSSRules` returns a plain object — it does **not** inject styles into the DOM. Use [`addCSSRules`](https://github.com/nicholasbg/addCSSRules) for injection:
+Both `css` (default export) and `parseCSS` return a plain object — they do **not**
+inject styles into the DOM. Use
+[`addCSSRules`](https://github.com/nicholasbg/addCSSRules) for injection:
 
 ```ts
-import { css } from "parsecssrules";
+import css from "parsecssrules";
 import { addCSSRules } from "addcssrules";
 
 const styles = css`
