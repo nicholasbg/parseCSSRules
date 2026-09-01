@@ -359,6 +359,19 @@ describe("css tagged template", () => {
     });
   });
 
+  it("handles content with curly braces selectors", () => {
+    const result = css`
+      [data-json='{"foo":"bar"}'] {
+        content: "{open} and {close}";
+      }
+    `;
+    expect(result).toEqual({
+      '[data-json=\'{"foo":"bar"}\']': {
+        content: '"{open} and {close}"',
+      },
+    });
+  });
+
   it("handles content with mixed delimiters in quotes", () => {
     const result = css`
       .test {
