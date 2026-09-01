@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "add-css-rules": "^1.0.0",
+    "csstype": "^3.2.3",
     "typescript": "^7.0.2",
     "vitest": "^4.1.11"
   }

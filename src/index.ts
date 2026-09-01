@@ -1,4 +1,10 @@
-import type { SelectorRules } from "add-css-rules";
+import type { PropertiesHyphen } from "csstype";
+
+export type StyleObject = PropertiesHyphen;
+
+export type SelectorRules = {
+  [selector: string]: string | StyleObject | SelectorRules;
+};
 
 const parseDeclaration = (
   result: SelectorRules,

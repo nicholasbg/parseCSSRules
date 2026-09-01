@@ -5,7 +5,7 @@ CSS tagged template literal that parses CSS syntax into a composable JavaScript 
 ## Install
 
 ```bash
-npm install parsecssrules
+npm install parse-css-rules
 ```
 
 Optionally install `csstype` for CSS property intellisense:
@@ -19,7 +19,7 @@ npm install csstype
 ### `css` tagged template (default export)
 
 ```ts
-import css from "parsecssrules";
+import css from "parse-css-rules";
 
 const styles = css`
   color: red;
@@ -65,7 +65,7 @@ const styles = css`
 ### `parseCSS` — raw string parser
 
 ```ts
-import { parseCSS } from "parsecssrules";
+import { parseCSS } from "parse-css-rules";
 
 const styles = parseCSS("color: red; font-size: 16px");
 // { "color": "red", "font-size": "16px" }
@@ -78,7 +78,7 @@ inject styles into the DOM. Use
 [`addCSSRules`](https://github.com/nicholasbg/addCSSRules) for injection:
 
 ```ts
-import css from "parsecssrules";
+import css from "parse-css-rules";
 import { addCSSRules } from "addcssrules";
 
 const styles = css`
@@ -101,7 +101,7 @@ addCSSRules(".my-component", styles);
 ## Types
 
 ```ts
-import type { StyleObject, SelectorRules } from "parsecssrules";
+import type { StyleObject, SelectorRules } from "parse-css-rules";
 ```
 
 - **`StyleObject`** — A flat CSS declaration map. When `csstype` is installed, provides full CSS property autocomplete via `PropertiesHyphen`.
