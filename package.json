@@ -1,6 +1,6 @@
 {
   "name": "parse-css-rules",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CSS tagged template literal that parses CSS syntax into a composable JavaScript object",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
